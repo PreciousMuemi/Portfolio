@@ -7,6 +7,8 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FiInstagram } from "react-icons/fi";
 import Navbar from './Component/Navbar';
 import AccessibilityMenu from './Component/AccesibilityMenu';
+import Sidebar from './Component/Sidebar';
+import ThemeSwitcher from './Component/ThemeSwitcher';
 
 
 const BackToTop = () => {
@@ -151,13 +153,15 @@ const AppWrapper = ({ children }) => {
   return (
     <div>
       <Preloader />
+      <Sidebar />
       <Navbar />
-      <main>
+      <main className="ml-64">
         {children}
       </main>
       <Footer />
       <AccessibilityMenu />
       <BackToTop />
+      <ThemeSwitcher />
     </div>
   );
 };
